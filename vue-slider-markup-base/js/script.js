@@ -39,6 +39,26 @@ const app = new Vue({
         /*Indichiamo l'indice dell'array che punta all'elemento attivo.
         Lo inizializziamo con valore 0*/
         activeSlideIndex: 0
+    },
+    /*Nei methods vado ad inserire una funzione che mi diminuisce e aumenta il valore
+    di activeSlideIndex a seconda se il click viene effettuato su prev o nex (vedi html). */
+    methods: {
+        prevSlide(){
+            /*Se active.. ha un valore maggiore di zero allora posso sottrarre valore e quindi
+            tornare indietro con le immagini*/
+            if(this.activeSlideIndex > 0){
+                this.activeSlideIndex--;
+            }
+        },
+        nextSlide(){
+             /*Se active.. ha un valore minore della lunghezza dell'array allora posso
+            aumentare il valore e quindi
+            andare avanti con le immagini*/
+            if(this.activeSlideIndex < this.slides.length-1){
+                this.activeSlideIndex++;
+            }
+        }
+
     }
 
-})
+});

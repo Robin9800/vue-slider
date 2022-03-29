@@ -21,16 +21,16 @@
                     <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" />
                     <div class="text">
                         <!--stessa cosa per titolo e testo-->
-                        <h3>{{slides[activeSlideIndex].title}}</h3>
+                        <h3>{{ slides[activeSlideIndex].title }}</h3>
                         <p>
-                            {{slides[activeSlideIndex].text}}
+                            {{ slides[activeSlideIndex].text }}
                         </p>
                     </div>
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prevSlide"></div>
+                    <div class="next" @click="nextSlide"></div>
                     <!--Aggiungiamo v-for creano un nome per ogni item
                     dell'array slides, ovvero "slide" e tramite la chiave "in" facciamo
                     ciclare dentro l'array-->
