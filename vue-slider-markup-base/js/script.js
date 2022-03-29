@@ -38,7 +38,7 @@ const app = new Vue({
         slides,
         /*Indichiamo l'indice dell'array che punta all'elemento attivo.
         Lo inizializziamo con valore 0*/
-        ActivesSlideIndex: 0
+        activeSlideIndex: 0
     }
 
 })
