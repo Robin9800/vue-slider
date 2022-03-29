@@ -30,6 +30,15 @@ console.log(slides);
 
 // Partendo dal template fornito renderizzare lo slider con Vue
 
+//Richiamo Vue inserendo come elemento l'id "app" nell'hatml.
+//e come data le "slides" aggiunta sopra.
 const app = new Vue({
-    el: '#root',
+    el: '#app',
+    data: {
+        slides,
+        /*Indichiamo l'indice dell'array che punta all'elemento attivo.
+        Lo inizializziamo con valore 0*/
+        ActivesSlideIndex: 0
+    }
+
 })
