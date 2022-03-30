@@ -54,9 +54,15 @@ const app = new Vue({
              /*Se active.. ha un valore minore della lunghezza dell'array allora posso
             aumentare il valore e quindi
             andare avanti con le immagini*/
-            if(this.activeSlideIndex < this.slides.length-1){
+            if(this.activeSlideIndex < slides.length){
                 this.activeSlideIndex++;
             }
+        },
+        checkIfActive(item){
+            const index = this.slides.findIndex(
+                (slide)=> slide.title === item.title
+            )
+            return index === this.activeSlideIndex? 'thumb active': 'thumb';
         }
 
     }
