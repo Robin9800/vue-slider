@@ -15,9 +15,9 @@
 
         <div class="container" >
             <!--Aggiungo keyUp in ascolto all'inizio di tutto il contenitore. Se si clicca sul tasto up o down allora l'evento si manifesterà-->
-            <div class="slider-wrapper" tabindex="0" @keyUp.up="prevSlide" @keyUp.down="nextSlide">
+            <div class="slider-wrapper" tabindex="0" @keyUp.up="prevSlide" @keyUp.down="nextSlide" @focus="hasFocused" @blur="hasBlurred">
 
-                <div class="item">
+                <div class="item" >
                     <!--Faccio visualizzare l'immagine presa dall'indice nell'array-->
                     <img :src="slides[activeSlideIndex].image" :alt="slides[activeSlideIndex].title" />
                     <div class="text">
