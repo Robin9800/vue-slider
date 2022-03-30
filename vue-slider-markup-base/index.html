@@ -14,7 +14,8 @@
     <div id="app">
 
         <div class="container" >
-            <div class="slider-wrapper" tabindex="0">
+            <!--Aggiungo keyUp in ascolto all'inizio di tutto il contenitore. Se si clicca sul tasto up o down allora l'evento si manifesterà-->
+            <div class="slider-wrapper" tabindex="0" @keyUp.up="prevSlide" @keyUp.down="nextSlide">
 
                 <div class="item">
                     <!--Faccio visualizzare l'immagine presa dall'indice nell'array-->
